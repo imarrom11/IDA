@@ -3,52 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="imagenes/ida_p.png" type="image/x-icon">
-    <title>IDA</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <title>Página de Registro</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .emerging-image {
+            position: absolute;
+            bottom: -150%;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: emerge 5s forwards, disappear 2s forwards 8s; /* Añadida animación de desaparición con retraso */
+            width: 800px; /* Tamaño de la imagen */
+            z-index: 1; /* Asegura que la imagen esté en un nivel inferior al formulario */
+        }
+
+        @keyframes emerge {
+            0% { bottom: -150%; }
+            100% { bottom: 50%; transform: translate(-50%, 50%); }
+        }
+
+        @keyframes disappear {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        .registration-form {
+            position: absolute;
+            top: 40%; /* Ajusta la posición del formulario más arriba */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%; /* Ajusta el tamaño del formulario */
+            z-index: 2; /* Asegura que el formulario esté por encima de la imagen */
+            opacity: 0;
+            animation: fadeIn 1s forwards 5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        h1 {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3; /* Asegura que el encabezado esté por encima de la imagen */
+            opacity: 0;
+            animation: fadeIn 1s forwards 5s; /* Aparece con el formulario */
+        }
+
+        input {
+            background-color: #333333;
+            border: 1px solid #444444;
+            color: #ffffff;
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%; /* Ajusta el tamaño de los inputs */
+        }
+
+        button {
+            background-color: #333333;
+            border: none;
+            color: #ffffff;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #444444;
+        }
+    </style>
 </head>
 <body>
-    <!-- Menú de navegación -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="">Servicios</a> 
-                <ul>
-                <li><a href="desarrollo.html">Desarrollo</a></li>
-                <li><a href="distribucion.html">Distribución</a></li>
-                <li><a href="">Merchandising</a></li>
-            </ul>
-            <li><a href="">Sobre Nosotros</a></li>
-        </li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-
-    <!-- Contenido -->
-    <div class="content">
-        <div class="containerIndex">
-        <h1 id="inicio">Bienvenido a nuestra página</h1>
-        <p>Esto es un ejemplo de un menú de navegación básico.</p>
-
-        <h2 id="sobre">Sobre Nosotros</h2>
-        <p>Información sobre nuestra empresa.</p>
-
-        <h2 id="servicios">Servicios</h2>
-        <p>Descripción de los servicios que ofrecemos.</p>
-
-        <h2 id="contacto">Contacto</h2>
-        <a href="contacto.html">Puedes contactarnos a través de nuestro formulario.</a>
-        <br>
-        <tr>
-            <td><video autoplay muted loop width="50%" height="50%">
-                <source src="videos/mariobros.mp4" type="video/mp4"></td>
-        </tr>
+    <div class="container">
+        <img src="imagenes/IDA_LOGO.png" alt="Imagen Emergente" class="emerging-image">
+        <h1>Registro</h1>
+        <form class="registration-form" action="inicio.html">
+            <input type="text" placeholder="Nombre de Usuario" required>
+            <input type="email" placeholder="Correo Electrónico" required>
+            <input type="password" placeholder="Contraseña" required>
+            <button type="submit">Registrarse</button>
+        </form>
     </div>
- </div>
-
- <video class="video-background" autoplay muted loop>
-    <source src="videos/transi.mp4" type="video/mp4">
-    
-    
 </body>
 </html>
+
+
