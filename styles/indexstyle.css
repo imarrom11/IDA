@@ -1,0 +1,84 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.emerging-image {
+    position: absolute;
+    bottom: -150%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: emerge 5s forwards, disappear 2s forwards 8s; /* Añadida animación de desaparición con retraso */
+    width: 800px; /* Tamaño de la imagen */
+    z-index: 1; /* Asegura que la imagen esté en un nivel inferior al formulario */
+}
+
+@keyframes emerge {
+    0% { bottom: -150%; }
+    100% { bottom: 50%; transform: translate(-50%, 50%); }
+}
+
+@keyframes disappear {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.registration-form {
+    position: absolute;
+    top: 40%; /* Ajusta la posición del formulario más arriba */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%; /* Ajusta el tamaño del formulario */
+    z-index: 2; /* Asegura que el formulario esté por encima de la imagen */
+    opacity: 0;
+    animation: fadeIn 1s forwards 5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3; /* Asegura que el encabezado esté por encima de la imagen */
+    opacity: 0;
+    animation: fadeIn 1s forwards 5s; /* Aparece con el formulario */
+}
+
+input {
+    background-color: #333333;
+    border: 1px solid #444444;
+    color: #ffffff;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%; /* Ajusta el tamaño de los inputs */
+}
+
+button {
+    background-color: #333333;
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444444;
+}
