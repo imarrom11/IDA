@@ -3,52 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="imagenes/ida_p.png" type="image/x-icon">
-    <title>IDA</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <title>Página de Registro</title>
+    <link rel="stylesheet" href="styles/indexstyle.css">
 </head>
 <body>
-    <!-- Menú de navegación -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="">Servicios</a> 
-                <ul>
-                <li><a href="desarrollo.html">Desarrollo</a></li>
-                <li><a href="distribucion.html">Distribución</a></li>
-                <li><a href="">Merchandising</a></li>
-            </ul>
-            <li><a href="">Sobre Nosotros</a></li>
-        </li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-
-    <!-- Contenido -->
-    <div class="content">
-        <div class="containerIndex">
-        <h1 id="inicio">Bienvenido a nuestra página</h1>
-        <p>Esto es un ejemplo de un menú de navegación básico.</p>
-
-        <h2 id="sobre">Sobre Nosotros</h2>
-        <p>Información sobre nuestra empresa.</p>
-
-        <h2 id="servicios">Servicios</h2>
-        <p>Descripción de los servicios que ofrecemos.</p>
-
-        <h2 id="contacto">Contacto</h2>
-        <a href="contacto.html">Puedes contactarnos a través de nuestro formulario.</a>
-        <br>
-        <tr>
-            <td><video autoplay muted loop width="50%" height="50%">
-                <source src="videos/mariobros.mp4" type="video/mp4"></td>
-        </tr>
+    <div class="container">
+        <img src="imagenes/IDA_LOGO.png" alt="Imagen Emergente" class="emerging-image">
+        <h1>Registro</h1>
+        <form class="registration-form" action="inicio.html">
+            <input type="text" placeholder="Nombre de Usuario" required>
+            <input type="email" placeholder="Correo Electrónico" required>
+            <input type="password" placeholder="Contraseña" required>
+            <button type="submit">Registrarse</button>
+        </form>
     </div>
- </div>
-
- <video class="video-background" autoplay muted loop>
-    <source src="videos/transi.mp4" type="video/mp4">
-    
-    
 </body>
 </html>
+
+
