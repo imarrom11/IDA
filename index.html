@@ -5,19 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Registro</title>
     <link rel="stylesheet" href="styles/indexstyle.css">
+    <!--Embed code para el estilo de Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Silkscreen:wght@400;700&family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <img src="imagenes/IDA_LOGO.png" alt="Imagen Emergente" class="emerging-image">
-        <h1>Registro</h1>
+        <video id="background-video" autoplay loop muted>
+            <source src="videos/Chess Battle Animation (online-video-cutter.com).mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+        </video>
         <form class="registration-form" action="inicio.html">
+            <h1 id="Registro">Registro</h1>
             <input type="text" placeholder="Nombre de Usuario" required>
             <input type="email" placeholder="Correo Electrónico" required>
             <input type="password" placeholder="Contraseña" required>
             <button type="submit">Registrarse</button>
+            <button type="button" onclick="location.href='login.html'">Log In</button>
+            <button type="button" onclick="location.href='inicio.html'"> Continuar sin Registro</button>
         </form>
     </div>
 </body>
 </html>
+
+
 
 
